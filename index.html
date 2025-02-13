@@ -59,30 +59,31 @@
     
     <script>
         const items = [
-            { name: "Ski Jacket", description: "Waterproof insulated jacket.", packed: false },
-            { name: "Ski Pants", description: "Breathable and water-resistant.", packed: false },
-            { name: "Ski Goggles", description: "Protects against glare and snow.", packed: false },
-            { name: "Helmet", description: "Safety essential.", packed: false },
-            { name: "Gloves", description: "Keep hands warm.", packed: false },
-            { name: "Base Layers", description: "Wicks moisture and keeps warmth.", packed: false },
-            { name: "Neck Gaiter / Balaclava", description: "Protects against wind and cold.", packed: false },
-            { name: "Thermal Socks", description: "Keeps feet warm and dry.", packed: false },
-            { name: "Ski Boots", description: "Ensure a proper fit for skiing.", packed: false },
-            { name: "Poles", description: "Essential for balance and turns.", packed: false },
-            { name: "Skis / Snowboard", description: "Your main skiing equipment.", packed: false },
-            { name: "Backpack", description: "For carrying essentials on the slopes.", packed: false },
-            { name: "Sunscreen", description: "Protects against high-altitude UV rays.", packed: false },
-            { name: "Lip Balm", description: "Prevents chapped lips in the cold.", packed: false },
-            { name: "Hand Warmers", description: "Extra warmth for hands and feet.", packed: false },
-            { name: "Water Bottle", description: "Stay hydrated on the slopes.", packed: false },
-            { name: "Snacks", description: "High-energy food for skiing breaks.", packed: false },
-            { name: "First Aid Kit", description: "For small emergencies.", packed: false },
-            { name: "Casual Clothes", description: "For après-ski activities.", packed: false },
-            { name: "Swimwear", description: "For hot tubs or saunas.", packed: false },
-            { name: "Travel Documents", description: "Passports, insurance, and reservations.", packed: false },
-            { name: "Phone & Charger", description: "Essential for communication.", packed: false },
-            { name: "Power Bank", description: "Keeps your phone charged on the slopes.", packed: false },
-            { name: "Camera / GoPro", description: "Capture your ski moments.", packed: false }
+            { name: "Ski Jacket", quantity: 1, description: "Waterproof insulated jacket.", packed: false },
+            { name: "Ski Pants", quantity: 1, description: "Breathable and water-resistant.", packed: false },
+            { name: "Ski Goggles", quantity: 1, description: "Protects against glare and snow.", packed: false },
+            { name: "Helmet", quantity: 1, description: "Safety essential.", packed: false },
+            { name: "Gloves", quantity: 2, description: "Keep hands warm. Bring a spare pair.", packed: false },
+            { name: "Base Layers", quantity: 4, description: "Wicks moisture and keeps warmth. Rotate between them.", packed: false },
+            { name: "Neck Gaiter / Balaclava", quantity: 2, description: "Protects against wind and cold.", packed: false },
+            { name: "Thermal Socks", quantity: 5, description: "Keeps feet warm and dry.", packed: false },
+            { name: "Ski Boots", quantity: 1, description: "Ensure a proper fit for skiing.", packed: false },
+            { name: "Poles", quantity: 1, description: "Essential for balance and turns.", packed: false },
+            { name: "Skis / Snowboard", quantity: 1, description: "Your main skiing equipment.", packed: false },
+            { name: "Backpack", quantity: 1, description: "For carrying essentials on the slopes.", packed: false },
+            { name: "Sunscreen", quantity: 1, description: "Protects against high-altitude UV rays.", packed: false },
+            { name: "Lip Balm", quantity: 1, description: "Prevents chapped lips in the cold.", packed: false },
+            { name: "Hand Warmers", quantity: 6, description: "Extra warmth for hands and feet.", packed: false },
+            { name: "Water Bottle", quantity: 1, description: "Stay hydrated on the slopes.", packed: false },
+            { name: "Snacks", quantity: 7, description: "High-energy food for skiing breaks.", packed: false },
+            { name: "First Aid Kit", quantity: 1, description: "For small emergencies.", packed: false },
+            { name: "Casual Clothes", quantity: 4, description: "For après-ski activities.", packed: false },
+            { name: "Swimwear", quantity: 1, description: "For hot tubs or saunas.", packed: false },
+            { name: "Pajamas", quantity: 2, description: "Comfortable sleepwear.", packed: false },
+            { name: "Travel Documents", quantity: 1, description: "Passports, insurance, and reservations.", packed: false },
+            { name: "Phone & Charger", quantity: 1, description: "Essential for communication.", packed: false },
+            { name: "Power Bank", quantity: 1, description: "Keeps your phone charged on the slopes.", packed: false },
+            { name: "Camera / GoPro", quantity: 1, description: "Capture your ski moments.", packed: false }
         ];
         
         function renderList() {
@@ -92,7 +93,7 @@
                 const div = document.createElement("div");
                 div.className = `item ${item.packed ? 'packed' : ''}`;
                 div.innerHTML = `
-                    <span>${item.name}</span>
+                    <span>${item.name} (x${item.quantity})</span>
                     <button onclick="togglePacked(${index})">${item.packed ? 'Undo' : 'Packed'}</button>
                 `;
                 list.appendChild(div);
