@@ -6,7 +6,7 @@
     <title>Ski Trip Packing</title>
     <style>
         body {
-            font-family: monospace;
+            font-family: 'Courier New', monospace;
             background: black;
             color: white;
             text-align: center;
@@ -15,12 +15,19 @@
         .container {
             max-width: 400px;
             margin: auto;
+            border: 2px solid white;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px white;
         }
         .item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 10px;
             border-bottom: 1px solid white;
+            font-size: 18px;
         }
         .packed {
             text-decoration: line-through;
@@ -30,12 +37,19 @@
             background: none;
             border: 1px solid white;
             color: white;
-            padding: 5px;
+            padding: 5px 10px;
             cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
         }
         button:active {
             background: white;
             color: black;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 24px;
+            text-shadow: 0 0 5px white;
         }
     </style>
 </head>
@@ -51,8 +65,24 @@
             { name: "Helmet", description: "Safety essential.", packed: false },
             { name: "Gloves", description: "Keep hands warm.", packed: false },
             { name: "Base Layers", description: "Wicks moisture and keeps warmth.", packed: false },
-            { name: "Neck Gaiter", description: "Optional wind protection.", packed: false },
-            { name: "Sunscreen", description: "Protects against UV rays.", packed: false }
+            { name: "Neck Gaiter / Balaclava", description: "Protects against wind and cold.", packed: false },
+            { name: "Thermal Socks", description: "Keeps feet warm and dry.", packed: false },
+            { name: "Ski Boots", description: "Ensure a proper fit for skiing.", packed: false },
+            { name: "Poles", description: "Essential for balance and turns.", packed: false },
+            { name: "Skis / Snowboard", description: "Your main skiing equipment.", packed: false },
+            { name: "Backpack", description: "For carrying essentials on the slopes.", packed: false },
+            { name: "Sunscreen", description: "Protects against high-altitude UV rays.", packed: false },
+            { name: "Lip Balm", description: "Prevents chapped lips in the cold.", packed: false },
+            { name: "Hand Warmers", description: "Extra warmth for hands and feet.", packed: false },
+            { name: "Water Bottle", description: "Stay hydrated on the slopes.", packed: false },
+            { name: "Snacks", description: "High-energy food for skiing breaks.", packed: false },
+            { name: "First Aid Kit", description: "For small emergencies.", packed: false },
+            { name: "Casual Clothes", description: "For après-ski activities.", packed: false },
+            { name: "Swimwear", description: "For hot tubs or saunas.", packed: false },
+            { name: "Travel Documents", description: "Passports, insurance, and reservations.", packed: false },
+            { name: "Phone & Charger", description: "Essential for communication.", packed: false },
+            { name: "Power Bank", description: "Keeps your phone charged on the slopes.", packed: false },
+            { name: "Camera / GoPro", description: "Capture your ski moments.", packed: false }
         ];
         
         function renderList() {
